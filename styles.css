@@ -127,7 +127,7 @@ textarea {
 .hero-section {
   position: relative;
   min-height: 100svh;
-  padding: 112px clamp(18px, 4vw, 52px) 30px;
+  padding: 130px clamp(18px, 4vw, 52px) 30px;
   color: var(--milk);
   background: var(--ink);
   overflow: hidden;
@@ -139,7 +139,8 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: 62% 18%;
+  transform: translateY(28px);
   z-index: 0;
 }
 
@@ -164,7 +165,7 @@ textarea {
   position: relative;
   z-index: 2;
   display: flex;
-  min-height: calc(100svh - 214px);
+  min-height: calc(100svh - 232px);
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -1029,7 +1030,8 @@ h1 {
   }
 
   .hero-bg {
-    object-position: 62% center;
+    object-position: 62% 18%;
+    transform: translateY(24px);
   }
 
   .quick-filter {
@@ -1073,7 +1075,8 @@ h1 {
     display: block;
     height: min(62vh, 520px);
     min-height: 390px;
-    object-position: 68% top;
+    object-position: 65% top;
+    transform: none;
   }
 
   .hero-overlay {
