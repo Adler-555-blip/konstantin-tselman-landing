@@ -655,12 +655,24 @@ h1 {
 }
 
 .method-filter {
-  background: rgba(16, 24, 32, 0.94);
-  border-color: rgba(247, 244, 238, 0.12);
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(16, 24, 32, 0.98), rgba(13, 47, 75, 0.94)),
+    radial-gradient(circle at 92% 0, rgba(167, 122, 69, 0.24), transparent 20rem);
+  border-color: rgba(247, 244, 238, 0.14);
 }
 
-.method-filter h3 {
-  color: var(--milk);
+.method-filter::before {
+  content: "filter";
+  position: absolute;
+  right: 24px;
+  bottom: -8px;
+  color: rgba(247, 244, 238, 0.05);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(64px, 8vw, 118px);
+  line-height: 0.8;
+  pointer-events: none;
 }
 
 .method-filter h3,
@@ -672,6 +684,19 @@ h1 {
   line-height: 1;
 }
 
+.method-filter h3 {
+  position: relative;
+  color: var(--milk);
+}
+
+.method-filter > p {
+  position: relative;
+  max-width: 620px;
+  margin: -4px 0 20px;
+  color: rgba(247, 244, 238, 0.72);
+  line-height: 1.58;
+}
+
 .method-filter ul,
 .method-result ul {
   display: grid;
@@ -679,6 +704,10 @@ h1 {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.method-result ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .method-filter li,
@@ -696,6 +725,16 @@ h1 {
   background: rgba(247, 244, 238, 0.07);
 }
 
+.method-result li {
+  min-height: 96px;
+  padding: 18px 18px 18px 42px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 244, 238, 0.8)),
+    radial-gradient(circle at 100% 0, rgba(167, 122, 69, 0.1), transparent 9rem);
+  border: 1px solid rgba(16, 24, 32, 0.08);
+  box-shadow: 0 14px 34px rgba(16, 24, 32, 0.06);
+}
+
 .method-filter li::before,
 .method-result li::before {
   position: absolute;
@@ -710,6 +749,20 @@ h1 {
 
 .method-result li::before {
   content: "+";
+}
+
+.method-proof {
+  margin: 22px 0 0;
+  padding: 24px clamp(24px, 3vw, 34px);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(167, 122, 69, 0.18);
+  border-left: 3px solid var(--bronze);
+  border-radius: 8px;
+  box-shadow: 0 18px 52px rgba(16, 24, 32, 0.06);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 2.6vw, 34px);
+  line-height: 1.18;
 }
 
 .method-cta {
@@ -1122,6 +1175,7 @@ h1 {
   }
 
   .quick-filter,
+  .method-result ul,
   .method-grid,
   .audience-grid,
   .checklist-grid,
