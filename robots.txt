@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://konstantin-tselman.ru/sitemap.xml
+Sitemap: https://adler-555-blip.github.io/konstantin-tselman-landing/sitemap.xml
