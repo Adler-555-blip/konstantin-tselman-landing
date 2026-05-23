@@ -511,10 +511,10 @@ h1 {
 .method-intro {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.42fr);
+  grid-template-columns: minmax(0, 0.78fr) minmax(220px, 0.22fr);
   gap: clamp(20px, 4vw, 48px);
   align-items: end;
-  margin: 0 0 22px;
+  margin: 0 0 30px;
   padding: clamp(28px, 4.4vw, 48px);
   color: #fff;
   background:
@@ -538,6 +538,7 @@ h1 {
 
 .method-intro p {
   position: relative;
+  max-width: 880px;
   margin: 0;
   color: rgba(255, 255, 255, 0.84);
   font-size: clamp(18px, 2vw, 22px);
@@ -566,7 +567,7 @@ h1 {
 
 .method-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 22px;
 }
 
 .method-item,
@@ -579,7 +580,7 @@ h1 {
 .method-item {
   position: relative;
   overflow: hidden;
-  min-height: 318px;
+  min-height: 292px;
   padding: clamp(26px, 3vw, 34px);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(251, 250, 247, 0.82)),
@@ -641,8 +642,8 @@ h1 {
 .method-insights {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 18px;
-  margin-top: 22px;
+  gap: 22px;
+  margin-top: 34px;
 }
 
 .method-filter,
@@ -752,7 +753,7 @@ h1 {
 }
 
 .method-proof {
-  margin: 22px 0 0;
+  margin: 30px 0 0;
   padding: 24px clamp(24px, 3vw, 34px);
   color: var(--ink);
   background: rgba(255, 255, 255, 0.74);
@@ -770,7 +771,7 @@ h1 {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 24px;
   align-items: center;
-  margin-top: 22px;
+  margin-top: 24px;
   padding: clamp(24px, 4vw, 38px);
   color: #fff;
   background: linear-gradient(135deg, #101820, #0d2f4b 58%, #75512c);
