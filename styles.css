@@ -152,13 +152,12 @@ textarea {
   background:
     linear-gradient(
       90deg,
-      rgba(16, 24, 32, 0.84) 0%,
-      rgba(16, 24, 32, 0.78) 27%,
-      rgba(16, 24, 32, 0.45) 52%,
-      rgba(16, 24, 32, 0.14) 76%,
-      rgba(16, 24, 32, 0.04) 100%
-    ),
-    linear-gradient(180deg, rgba(16, 24, 32, 0.16), rgba(16, 24, 32, 0.28));
+      rgba(10, 14, 18, 0.55) 0%,
+      rgba(10, 14, 18, 0.46) 24%,
+      rgba(10, 14, 18, 0.28) 42%,
+      rgba(10, 14, 18, 0.08) 68%,
+      rgba(10, 14, 18, 0.02) 100%
+    );
 }
 
 .hero-content {
@@ -257,7 +256,7 @@ h1 {
 
 .hero-section .eyebrow {
   color: #ead9bf;
-  background: rgba(16, 24, 32, 0.48);
+  background: rgba(10, 14, 18, 0.34);
   border-color: rgba(231, 209, 179, 0.28);
   box-shadow: none;
   backdrop-filter: blur(16px);
@@ -297,7 +296,7 @@ h1 {
   align-items: center;
   padding: 8px 13px;
   color: rgba(247, 244, 238, 0.9);
-  background: rgba(16, 24, 32, 0.42);
+  background: rgba(10, 14, 18, 0.3);
   border: 1px solid rgba(231, 209, 179, 0.22);
   border-radius: 999px;
   backdrop-filter: blur(16px);
@@ -1141,8 +1140,8 @@ h1 {
     height: min(62vh, 520px);
     min-height: 390px;
     background:
-      linear-gradient(180deg, rgba(16, 24, 32, 0.08) 0%, rgba(16, 24, 32, 0.22) 46%, rgba(16, 24, 32, 0.96) 100%),
-      linear-gradient(90deg, rgba(16, 24, 32, 0.62), rgba(16, 24, 32, 0.16));
+      linear-gradient(180deg, rgba(10, 14, 18, 0.02) 0%, rgba(10, 14, 18, 0.12) 48%, rgba(10, 14, 18, 0.86) 100%),
+      linear-gradient(90deg, rgba(10, 14, 18, 0.38), rgba(10, 14, 18, 0.08));
   }
 
   .hero-content {
