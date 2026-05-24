@@ -993,7 +993,7 @@ h1 {
 .contact-section {
   display: grid;
   grid-template-columns: minmax(0, 0.86fr) minmax(360px, 0.78fr);
-  gap: 34px;
+  gap: clamp(28px, 5vw, 58px);
   align-items: start;
 }
 
@@ -1002,11 +1002,72 @@ h1 {
   top: 112px;
 }
 
+.contact-copy h2 {
+  max-width: 680px;
+}
+
+.contact-copy > p:not(.eyebrow) {
+  max-width: 640px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.66;
+}
+
+.contact-benefits {
+  margin-top: 28px;
+  padding: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(251, 250, 247, 0.76)),
+    radial-gradient(circle at 100% 0, rgba(167, 122, 69, 0.12), transparent 12rem);
+  border: 1px solid rgba(16, 24, 32, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 18px 52px rgba(16, 24, 32, 0.07);
+}
+
+.contact-benefits h3 {
+  margin: 0 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.contact-benefits ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-benefits li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--muted);
+  line-height: 1.48;
+}
+
+.contact-benefits li::before {
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--bronze);
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(167, 122, 69, 0.12);
+}
+
 .contact-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  padding: 24px;
+  gap: 18px;
+  padding: clamp(24px, 3vw, 34px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(251, 250, 247, 0.86)),
+    radial-gradient(circle at 100% 0, rgba(13, 47, 75, 0.08), transparent 14rem);
+  border-color: rgba(16, 24, 32, 0.1);
 }
 
 .contact-form input,
@@ -1020,12 +1081,21 @@ h1 {
 }
 
 .wide-field,
-.contact-form button {
+.contact-form button,
+.form-note {
   grid-column: 1 / -1;
 }
 
 .contact-form button {
   width: 100%;
+}
+
+.form-note {
+  margin: -2px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 @keyframes drift {
