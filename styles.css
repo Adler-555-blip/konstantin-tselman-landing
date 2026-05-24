@@ -161,6 +161,16 @@ textarea {
   display: none;
 }
 
+.mobile-accordion-toggle,
+.mobile-insight-toggle,
+.mobile-detail-toggle,
+.district-more-toggle,
+.mobile-mid-cta,
+.mobile-visual-pause,
+.mobile-contact-steps {
+  display: none;
+}
+
 body.mobile-menu-open {
   overflow: hidden;
 }
@@ -1232,6 +1242,15 @@ h1 {
     border-color: transparent;
   }
 
+  .section {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  .section h2 {
+    font-size: clamp(32px, 8vw, 44px);
+  }
+
   .hero-section {
     min-height: auto;
     padding: calc(var(--header-height) + 14px) 0 22px;
@@ -1269,6 +1288,366 @@ h1 {
     background: rgba(10, 14, 18, 0.5);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
+  }
+
+  .mobile-visual-pause {
+    position: relative;
+    display: grid;
+    min-height: 190px;
+    align-items: end;
+    margin: 18px 14px 0;
+    padding: 18px;
+    overflow: hidden;
+    color: var(--milk);
+    background-image:
+      linear-gradient(180deg, rgba(16, 24, 32, 0.04), rgba(16, 24, 32, 0.58)),
+      url("./assets/hero-konstantin-sochi.png");
+    background-size: cover;
+    background-position: 30% 52%;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+  }
+
+  .mobile-visual-pause span {
+    max-width: 260px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .location-pause {
+    margin-top: 0;
+    background-image:
+      linear-gradient(135deg, rgba(16, 24, 32, 0.82), rgba(13, 47, 75, 0.62)),
+      radial-gradient(circle at 82% 18%, rgba(234, 212, 180, 0.36), transparent 7rem),
+      linear-gradient(110deg, transparent 0 42%, rgba(234, 212, 180, 0.28) 42% 43%, transparent 43% 100%);
+  }
+
+  .method-grid,
+  .method-insights,
+  .case-grid {
+    gap: 12px;
+  }
+
+  .method-item,
+  .method-filter,
+  .method-result,
+  .district-card,
+  .case-item {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .mobile-accordion-toggle,
+  .mobile-insight-toggle,
+  .mobile-detail-toggle,
+  .district-more-toggle {
+    min-height: 46px;
+    width: 100%;
+    border: 0;
+    border-radius: 16px;
+    cursor: pointer;
+    font: inherit;
+  }
+
+  .mobile-accordion-toggle {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 7px 12px;
+    align-items: center;
+    padding: 0;
+    color: var(--ink);
+    background: transparent;
+    text-align: left;
+  }
+
+  .mobile-accordion-number {
+    grid-row: span 2;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    color: var(--bronze-dark);
+    background: rgba(167, 122, 69, 0.12);
+    border-radius: 50%;
+    font-weight: 900;
+  }
+
+  .mobile-accordion-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    line-height: 1;
+  }
+
+  .mobile-accordion-summary {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.38;
+  }
+
+  .toggle-label {
+    justify-self: end;
+    min-height: 34px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--bronze-dark);
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  .toggle-label::after {
+    content: "+";
+    display: grid;
+    width: 24px;
+    height: 24px;
+    place-items: center;
+    color: var(--ink);
+    background: rgba(167, 122, 69, 0.12);
+    border-radius: 50%;
+  }
+
+  .is-open > .mobile-accordion-toggle .toggle-label::after,
+  .is-open > .mobile-insight-toggle .toggle-label::after,
+  .is-open > .mobile-detail-toggle .toggle-label::after {
+    content: "−";
+  }
+
+  .method-item > span,
+  .method-item > h3,
+  .method-item > p {
+    display: none;
+  }
+
+  .method-item.is-open > p {
+    display: block;
+    margin: 16px 0 0;
+  }
+
+  .mobile-insight-toggle {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 12px;
+    padding: 0;
+    color: inherit;
+    background: transparent;
+    text-align: left;
+  }
+
+  .mobile-insight-toggle > span:first-child {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    line-height: 1;
+  }
+
+  .mobile-insight-toggle small {
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 14px;
+    line-height: 1.42;
+  }
+
+  .method-result .mobile-insight-toggle small {
+    color: var(--muted);
+  }
+
+  .method-filter > h3,
+  .method-filter > p,
+  .method-filter > ul,
+  .method-result > h3,
+  .method-result > ul {
+    display: none;
+  }
+
+  .method-filter.is-open > p {
+    display: block;
+    margin-top: 16px;
+  }
+
+  .method-filter.is-open > ul,
+  .method-result.is-open > ul {
+    display: grid;
+  }
+
+  .method-proof {
+    font-size: 24px;
+  }
+
+  .mobile-mid-cta {
+    display: grid;
+    gap: 12px;
+    margin: 0 14px;
+    padding: 22px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--ink), var(--blue) 62%, var(--bronze-dark));
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+  }
+
+  .mobile-mid-cta h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  .mobile-mid-cta p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.48;
+  }
+
+  .mobile-mid-cta .primary-action {
+    width: 100%;
+    color: var(--ink);
+    background: linear-gradient(135deg, #f4e5c8, #b8894d);
+  }
+
+  .district-warning {
+    padding: 20px;
+  }
+
+  .district-grid .district-card:nth-child(n + 5) {
+    display: none;
+  }
+
+  .district-grid.districts-expanded .district-card {
+    display: block;
+  }
+
+  .district-card-head {
+    margin-bottom: 12px;
+  }
+
+  .district-card dl {
+    gap: 8px;
+  }
+
+  .district-card dl div {
+    padding: 10px 0 0;
+    background: transparent;
+    border-top: 1px solid rgba(16, 24, 32, 0.08);
+  }
+
+  .district-card dl div:nth-child(4) {
+    display: none;
+  }
+
+  .district-card.is-open dl div:nth-child(4) {
+    display: block;
+  }
+
+  .district-card dd,
+  .case-item dd {
+    font-size: 14px;
+    line-height: 1.42;
+  }
+
+  .mobile-detail-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    color: var(--bronze-dark);
+    background: rgba(167, 122, 69, 0.1);
+  }
+
+  .district-more-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    color: var(--milk);
+    background: var(--ink);
+    font-weight: 900;
+  }
+
+  .case-item > p {
+    margin-bottom: 10px;
+  }
+
+  .case-item h3 {
+    margin-bottom: 14px;
+    font-size: 23px;
+  }
+
+  .case-item dl div {
+    display: none;
+  }
+
+  .case-item dl div:last-child,
+  .case-item.is-open dl div {
+    display: block;
+  }
+
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    margin-right: -14px;
+    padding: 0 14px 8px 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .checklist-grid article {
+    min-width: min(78vw, 310px);
+    scroll-snap-align: start;
+  }
+
+  .faq-list {
+    gap: 10px;
+  }
+
+  .faq-list summary {
+    position: relative;
+    min-height: 52px;
+    padding-right: 42px;
+  }
+
+  .faq-list summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    display: grid;
+    width: 26px;
+    height: 26px;
+    place-items: center;
+    color: var(--bronze-dark);
+    background: rgba(167, 122, 69, 0.12);
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  .faq-list details[open] summary::after {
+    content: "−";
+  }
+
+  .mobile-contact-steps {
+    display: grid;
+    gap: 12px;
+    margin: 20px 0 0;
+    padding: 18px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(251, 250, 247, 0.78)),
+      radial-gradient(circle at 100% 0, rgba(167, 122, 69, 0.14), transparent 9rem);
+    border: 1px solid rgba(167, 122, 69, 0.16);
+    border-radius: 22px;
+    box-shadow: 0 16px 42px rgba(16, 24, 32, 0.08);
+  }
+
+  .mobile-contact-steps span {
+    color: var(--bronze-dark);
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .mobile-contact-steps ol {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding-left: 20px;
+    color: var(--ink);
   }
 }
 
@@ -1353,7 +1732,7 @@ h1 {
   }
 
   .section {
-    padding: 72px 14px;
+    padding: 58px 14px;
   }
 
   .section h2 {
