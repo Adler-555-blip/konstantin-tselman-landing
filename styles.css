@@ -221,7 +221,6 @@ h1 {
 
 .primary-action,
 .secondary-action,
-.quick-filter button,
 .contact-form button {
   display: inline-flex;
   min-height: 52px;
@@ -234,7 +233,6 @@ h1 {
 }
 
 .primary-action,
-.quick-filter button,
 .contact-form button {
   color: #fff;
   background: linear-gradient(135deg, var(--blue), var(--ink));
@@ -295,40 +293,17 @@ h1 {
   backdrop-filter: blur(16px);
 }
 
-.quick-filter {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
-  gap: 10px;
-  max-width: 1200px;
-  margin: 22px auto 0;
-  padding: 12px;
-  background: rgba(16, 24, 32, 0.68);
-  border: 1px solid rgba(247, 244, 238, 0.2);
-  border-radius: 8px;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
-  backdrop-filter: blur(20px);
-}
-
-.quick-filter label,
 .contact-form label {
   display: grid;
   gap: 8px;
 }
 
-.quick-filter span,
 .contact-form span {
   color: var(--muted);
   font-size: 12px;
   font-weight: 850;
 }
 
-.quick-filter span {
-  color: rgba(247, 244, 238, 0.72);
-}
-
-.quick-filter select,
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -341,21 +316,8 @@ h1 {
   outline: none;
 }
 
-.quick-filter select {
-  color: var(--milk);
-  background: rgba(247, 244, 238, 0.1);
-  border-color: rgba(247, 244, 238, 0.18);
-}
-
-.quick-filter select,
 .contact-form select {
   padding: 0 14px;
-}
-
-.quick-filter button {
-  align-self: end;
-  min-width: 178px;
-  padding: 0 22px;
 }
 
 .intro-band {
@@ -808,7 +770,7 @@ h1 {
   grid-template-columns: minmax(180px, 0.3fr) minmax(0, 1fr);
   gap: 18px;
   align-items: start;
-  margin: 34px 0 18px;
+  margin: 30px 0 20px;
   padding: 24px;
   color: #fff;
   background: linear-gradient(135deg, var(--ink), var(--blue));
@@ -829,25 +791,25 @@ h1 {
 
 .district-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
 }
 
 .district-card {
-  padding: 28px;
+  padding: 20px;
 }
 
 .district-card-head {
   display: grid;
-  gap: 14px;
-  margin-bottom: 18px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .district-card-head h3 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(30px, 3vw, 44px);
+  font-size: clamp(25px, 2.2vw, 34px);
   font-weight: 500;
   line-height: 1;
 }
@@ -859,7 +821,7 @@ h1 {
 }
 
 .district-tags span {
-  padding: 7px 10px;
+  padding: 6px 9px;
   color: var(--blue);
   background: rgba(13, 47, 75, 0.08);
   border: 1px solid rgba(13, 47, 75, 0.1);
@@ -875,8 +837,8 @@ h1 {
 .district-card dl,
 .case-item dl {
   display: grid;
-  gap: 12px;
-  margin: 22px 0 0;
+  gap: 10px;
+  margin: 0;
 }
 
 .district-card dt,
@@ -892,7 +854,7 @@ h1 {
 
 .district-card dl div,
 .case-item dl div {
-  padding: 14px;
+  padding: 12px;
   background: rgba(13, 47, 75, 0.055);
   border-radius: 8px;
 }
@@ -935,11 +897,14 @@ h1 {
 .case-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 18px;
 }
 
 .case-item {
   padding: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(251, 250, 247, 0.82)),
+    radial-gradient(circle at 100% 0, rgba(167, 122, 69, 0.1), transparent 12rem);
 }
 
 .case-item > p {
@@ -954,7 +919,7 @@ h1 {
 }
 
 .case-item h3 {
-  font-size: 26px;
+  font-size: 25px;
 }
 
 .checklist-grid {
@@ -1114,6 +1079,7 @@ h1 {
 
   .method-grid,
   .audience-grid,
+  .district-grid,
   .checklist-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1146,14 +1112,6 @@ h1 {
   .hero-bg {
     object-position: 62% 18%;
     transform: translateY(24px);
-  }
-
-  .quick-filter {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .quick-filter button {
-    grid-column: 1 / -1;
   }
 
   .contact-copy {
@@ -1232,18 +1190,14 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .quick-filter,
   .method-result ul,
   .method-grid,
+  .district-grid,
   .audience-grid,
   .checklist-grid,
   .intro-band,
   .contact-form {
     grid-template-columns: 1fr;
-  }
-
-  .quick-filter {
-    margin: 0 14px;
   }
 
   .section {
