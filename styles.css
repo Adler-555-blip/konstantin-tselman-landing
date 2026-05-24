@@ -165,12 +165,12 @@ textarea {
 .hero-copy {
   max-width: 700px;
   padding: clamp(32px, 4vw, 46px);
-  background: rgba(10, 14, 18, 0.52);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(10, 14, 18, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 28px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 .eyebrow {
@@ -1143,7 +1143,7 @@ h1 {
   .hero-copy {
     padding: 24px;
     border-radius: 22px;
-    background: rgba(10, 14, 18, 0.62);
+    background: rgba(10, 14, 18, 0.5);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
   }
