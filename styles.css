@@ -1262,8 +1262,8 @@ h1 {
     position: relative;
     display: block;
     width: calc(100% - 28px);
-    height: min(55vh, 500px);
-    min-height: 360px;
+    height: clamp(280px, 35svh, 310px);
+    min-height: 0;
     margin: 0 14px;
     border-radius: 0;
     object-position: 62% 42%;
@@ -1275,8 +1275,8 @@ h1 {
     right: 0;
     bottom: auto;
     left: 0;
-    height: min(55vh, 500px);
-    min-height: 360px;
+    height: clamp(280px, 35svh, 310px);
+    min-height: 0;
     background: none;
   }
 
@@ -1288,7 +1288,7 @@ h1 {
   }
 
   .hero-copy {
-    padding: 28px 0 0;
+    padding: 20px 0 0;
     color: var(--ink);
     background: transparent;
     border: 0;
@@ -1309,11 +1309,28 @@ h1 {
   .hero-section h1 {
     max-width: 100%;
     color: var(--ink);
+    margin-bottom: 12px;
+    font-size: clamp(32px, 8.8vw, 40px);
+    line-height: 0.96;
     text-shadow: none;
   }
 
   .hero-lead {
+    margin-bottom: 16px;
     color: var(--muted);
+    font-size: 15px;
+    line-height: 1.42;
+  }
+
+  .hero-actions {
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .hero-actions .primary-action,
+  .hero-actions .secondary-action {
+    min-height: 48px;
+    padding: 0 18px;
   }
 
   .hero-section .secondary-action {
@@ -1712,8 +1729,8 @@ h1 {
     position: relative;
     display: block;
     width: calc(100% - 28px);
-    height: min(55vh, 500px);
-    min-height: 360px;
+    height: clamp(280px, 35svh, 310px);
+    min-height: 0;
     margin: 0 14px;
     object-position: 62% 42%;
     transform: none;
@@ -1724,8 +1741,8 @@ h1 {
     right: 0;
     bottom: auto;
     left: 0;
-    height: min(55vh, 500px);
-    min-height: 360px;
+    height: clamp(280px, 35svh, 310px);
+    min-height: 0;
     background: none;
   }
 
@@ -1737,7 +1754,7 @@ h1 {
   }
 
   .hero-copy {
-    padding: 28px 0 0;
+    padding: 20px 0 0;
     color: var(--ink);
     background: transparent;
     border: 0;
@@ -1748,17 +1765,21 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(38px, 11.4vw, 48px);
-    line-height: 0.98;
+    font-size: clamp(32px, 8.8vw, 40px);
+    line-height: 0.96;
   }
 
   .hero-lead {
-    font-size: 16px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 1.42;
   }
 
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
   }
 
   .method-result ul,
