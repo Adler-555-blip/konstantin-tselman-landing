@@ -1253,7 +1253,7 @@ h1 {
 
   .hero-section {
     min-height: auto;
-    padding: calc(var(--header-height) + 14px) 0 22px;
+    padding: 0 0 22px;
   }
 
   .hero-bg {
@@ -1266,7 +1266,7 @@ h1 {
   }
 
   .hero-overlay {
-    top: var(--header-height);
+    top: 0;
     right: 0;
     bottom: auto;
     left: 0;
@@ -1666,7 +1666,7 @@ h1 {
 
   .hero-section {
     min-height: auto;
-    padding: calc(var(--header-height) + 14px) 0 22px;
+    padding: 0 0 22px;
   }
 
   .method-section::before {
@@ -1683,7 +1683,7 @@ h1 {
   }
 
   .hero-overlay {
-    top: var(--header-height);
+    top: 0;
     right: 0;
     bottom: auto;
     left: 0;
